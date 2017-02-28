@@ -7,6 +7,8 @@
 <tiles:importAttribute name="domainTypeAdministrationConfiguration" ignore="true"/>
 
 <spring:message code="to.dashboard" var="to_dashboard"/>
+<spring:message code="create.new" var="new_entity"/>
+
 <div id="header" class="wrapper">
 	<div class="logo">
 		<a href="<light:url value='/'/>" title="${to_dashboard}">
@@ -20,7 +22,7 @@
 				<li class="iZipFiles"></li>
                                 <li class="iCreate">
 					<a href="<light:url value='${light:domainBaseUrl(domainTypeAdministrationConfiguration)}'/>/create">
-						<span>Create New</span>
+						<span>${new_entity}</span>
 					</a>
 				</li>
 			</ul>

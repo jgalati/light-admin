@@ -41,9 +41,6 @@
 
             <div class="userNav">
                 <ul>
-                    <li>
-                        <a href="<c:out value='${lightAdminConfiguration.helpUrl}'/>"><img src="<light:url value='/images/icons/topnav/help.png'/>" alt=""><span>Help</span></a>
-                    </li>
                 </ul>
             </div>
 
