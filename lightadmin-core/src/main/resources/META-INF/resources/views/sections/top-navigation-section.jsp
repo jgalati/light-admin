@@ -9,6 +9,7 @@
 <tiles:importAttribute name="lightAdminConfiguration" ignore="true"/>
 
 <spring:message code="back.to.site" var="back_to_site"/>
+<spring:message code="hello" var="hello"/>
 
 <div id="topNav">
     <div class="fixed">
