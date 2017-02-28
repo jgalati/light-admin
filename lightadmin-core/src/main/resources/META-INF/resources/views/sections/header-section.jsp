@@ -16,13 +16,13 @@
 	<div class="middleNav">
 		<c:if test="${not empty domainTypeAdministrationConfiguration}">
 			<ul>
-				<li class="iCreate">
+				<li class="iArchive"></li>
+				<li class="iZipFiles"></li>
+                                <li class="iCreate">
 					<a href="<light:url value='${light:domainBaseUrl(domainTypeAdministrationConfiguration)}'/>/create">
 						<span>Create New</span>
 					</a>
 				</li>
-				<li class="iArchive"></li>
-				<li class="iZipFiles"></li>
 			</ul>
 		</c:if>
 	</div>

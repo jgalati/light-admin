@@ -17,6 +17,7 @@
 <spring:message code="click.for.quick.view" var="click_quick"/>
 <spring:message code="no.data.available.in.table" var="no_data"/>
 <spring:message code="no.matching.records.found" var="no_matching"/>
+<spring:message code="page.items" var="items_per_page"/>
 <spring:message code="loading" var="loading"/>
 <spring:message code="search" var="search"/>
 <spring:message code="processing" var="processing"/>
@@ -106,7 +107,7 @@
             "sPaginationType": "full_numbers",
             "oLanguage": {
                 "sProcessing": "${processing}",
-                "sLengthMenu": "<span class='itemsPerPage'>Items per page:</span> <span style='font-size: 11px;'>_MENU_</span>",
+                "sLengthMenu": "<span class='itemsPerPage'>${items_per_page}:</span> <span style='font-size: 11px;'>_MENU_</span>",
                 "sZeroRecords": "${no_matching}",
                 "sEmptyTable": "${no_data}",
                 "sLoadingRecords": "${loading}",
