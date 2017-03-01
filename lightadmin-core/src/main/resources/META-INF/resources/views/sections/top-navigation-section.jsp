@@ -26,8 +26,9 @@
 
             <sec:authorize access="isAuthenticated()">
                 <div class="welcome">
-                    <a href="#" title="">
-                        <img src="<light:url value='/images/userPic.png'/>" alt=""/></a>
+                    <a>
+                        <img src="<light:url value='/images/userPic.png'/>" alt=""/>
+                    </a>
                     <span>${hello}, <sec:authentication property="principal.username"/>!</span>
                 </div>
                 <div class="userNav">
