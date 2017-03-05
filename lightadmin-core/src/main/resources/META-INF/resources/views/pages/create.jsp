@@ -69,6 +69,9 @@
         </div>
     </div>
 </form>
+<c:if test="${additionalCreateNote}">
+    <div class="nNote nInformation"><p>${additionalCreateNote}</p></div>
+</c:if>
 
 <script type="text/javascript">
     $(function () {
