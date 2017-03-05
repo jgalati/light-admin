@@ -15,7 +15,7 @@
 <tiles:importAttribute name="entityPluralName"/>
 
 <tiles:importAttribute name="fields"/>
-<tiles:importAttribute name="additionalCreateNote"/>
+<tiles:importAttribute name="additionalCreateNote" ignore="true"/>
 
 <tiles:importAttribute name="dialogMode" ignore="true"/>
 
