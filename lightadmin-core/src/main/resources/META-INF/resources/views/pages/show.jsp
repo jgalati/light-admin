@@ -19,12 +19,13 @@
 <light:url var="domainBaseUrl" value="${light:domainBaseUrl(domainTypeAdministrationConfiguration)}" scope="page"/>
 <spring:message code="edit" var="edit"/>
 <spring:message code="remove" var="remove"/>
+<spring:message code="show" var="show"/>
 <spring:message code="delete.registry" var="delete_registry"/>
 <spring:message code="are.you.sure" var="are_you_sure"/>
 <spring:message code="update.operation.has.been.performed.successfully" var="update_successfully"/>
 
 <div class="title">
-    <h5><c:out value="Show ${light:capitalize(light:cutLongText(entitySingularName))}"/></h5>
+    <h5><c:out value="${show} ${light:capitalize(light:cutLongText(entitySingularName))}"/></h5>
 </div>
 
 <light-jsp:breadcrumb>

@@ -19,6 +19,7 @@
 <tiles:importAttribute name="dialogMode" ignore="true"/>
 
 <light:url var="domainBaseUrl" value="${light:domainBaseUrl(domainTypeAdministrationConfiguration)}"/>
+<spring:message code="create" var="create"/>
 
 <c:set var="dialogMode" value="${dialogMode eq null ? false : true}"/>
 <c:set var="domainTypeFormName" value="${domainTypeAdministrationConfiguration.pluralDomainTypeName}${dialogMode ? '-dialog-form' : '-form'}"/>
@@ -27,7 +28,7 @@
 
 <c:if test="${not dialogMode}">
     <div class="title">
-        <h5><c:out value="Create ${light:capitalize(light:cutLongText(entitySingularName))}"/></h5>
+        <h5><c:out value="${create} ${light:capitalize(light:cutLongText(entitySingularName))}"/></h5>
     </div>
 
     <light-jsp:breadcrumb>
