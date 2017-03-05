@@ -21,5 +21,7 @@ import org.lightadmin.core.config.domain.unit.ConfigurationUnitBuilder;
 public interface ScreenContextConfigurationUnitBuilder extends ConfigurationUnitBuilder<ScreenContextConfigurationUnit> {
 
     ScreenContextConfigurationUnitBuilder screenName(String screenName);
+    
+    ScreenContextConfigurationUnitBuilder additionalCreateNote(String additionalCreateNote);
 
 }
