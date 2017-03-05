@@ -30,7 +30,7 @@
 <script type="text/javascript" src="<light:url value="/scripts/vendor/plugins/forms/autogrowtextarea.js"/>"></script>
 <script type="text/javascript" src="<light:url value="/scripts/vendor/plugins/forms/autotab.js"/>"></script>
 <script type="text/javascript"
-        src="<light:url value="/scripts/vendor/plugins/forms/jquery.validationEngine-en.js"/>"></script>
+        src="<light:url value="/scripts/vendor/plugins/forms/jquery.validationEngine-es.js"/>"></script>
 <script type="text/javascript"
         src="<light:url value="/scripts/vendor/plugins/forms/jquery.validationEngine.js"/>"></script>
 <script type="text/javascript" src="<light:url value="/scripts/vendor/plugins/forms/jquery.dualListBox.js"/>"></script>
