@@ -36,7 +36,7 @@ public abstract class ScopeMetadataUtils {
     }
 
     public static ScopeMetadata all() {
-        return new DefaultScopeMetadata().name("All");
+        return new DefaultScopeMetadata().name("Todos");
     }
 
     public static <T> ScopeMetadata filter(DomainTypePredicate<T> filter) {
