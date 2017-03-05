@@ -109,7 +109,7 @@ var FieldValueRenderer = (function () {
 
     function BooleanValueRenderer() {
         this.render = function (propertyName, propertyValue) {
-            return propertyValue ? 'Yes' : 'No';
+            return propertyValue ? 'Si' : 'No';
         }
     }
 
