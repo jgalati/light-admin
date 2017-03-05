@@ -19,7 +19,7 @@
 <light:url var="domainBaseUrl" value="${light:domainBaseUrl(domainTypeAdministrationConfiguration)}" scope="page"/>
 <spring:message code="edit" var="edit"/>
 <spring:message code="remove" var="remove"/>
-<spring:message code="confirmation.dialog" var="confrmation_dialog"/>
+<spring:message code="delete.registry" var="delete_registry"/>
 <spring:message code="are.you.sure" var="are_you_sure"/>
 <spring:message code="update.operation.has.been.performed.successfully" var="update_successfully"/>
 
@@ -64,7 +64,7 @@
         var entity_id = '${entityId}';
 
         $("a.remove_button").click(function () {
-            jConfirm('${are_you_sure}', '${confrmation_dialog}', function (r) {
+            jConfirm('${are_you_sure}', '${delete_registry}', function (r) {
                 if (r) {
                     new FormViewController(ApplicationConfig.RESOURCE_NAME).removeDomainEntity(entity_id, function() {
                         window.location = ApplicationConfig.getDomainEntityCollectionUrl(ApplicationConfig.RESOURCE_NAME);

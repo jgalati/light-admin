@@ -25,6 +25,7 @@
 <spring:message code="page.prev" var="page_prev"/>
 <spring:message code="page.first" var="page_first"/>
 <spring:message code="page.last" var="page_last"/>
+<spring:message code="delete.registry" var="delete_registry"/>
 <spring:message code="are.you.sure" var="are_sure"/>
 
 <spring:message code="edit" var="edit"/>
@@ -154,7 +155,7 @@
         $("#listViewTable").attr("data-loaded", true);
         $("a.removeBtn").click(function () {
             var entityId = $(this).attr('data-entity-id');
-            jConfirm('${are_sure}', '${confirm_dialog}', function (r) {
+            jConfirm('${are_sure}', '${delete_registry}', function (r) {
                 if (r) {
                     new FormViewController(ApplicationConfig.RESOURCE_NAME).removeDomainEntity(entityId, function () {
                         getSearcher().search();
