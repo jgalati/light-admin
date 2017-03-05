@@ -69,7 +69,7 @@
         </div>
     </div>
 </form>
-<c:if test="${additionalCreateNote}">
+<c:if test="${not additionalCreateNote}">
     <div class="nNote nInformation"><p>${additionalCreateNote}</p></div>
 </c:if>
 
