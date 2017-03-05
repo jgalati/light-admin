@@ -146,7 +146,7 @@ $( function () {
 											}
 										},
 										messages: {
-											req: "Este campo es requerido",
+											req: "This field is required",
 											sel: "Oops, required!",
 											chb: "Check it",
 											email: {
