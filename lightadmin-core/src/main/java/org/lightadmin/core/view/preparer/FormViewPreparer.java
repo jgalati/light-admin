@@ -26,5 +26,6 @@ public class FormViewPreparer extends ConfigurationAwareViewPreparer {
         super.execute(request, attributeContext, configuration);
 
         addAttribute(attributeContext, "fields", configuration.getFormViewFragment().getFields());
+        addAttribute(attributeContext, "additionalCreateNote", configuration.getScreenContext().getAdditionalCreateNote());
     }
 }

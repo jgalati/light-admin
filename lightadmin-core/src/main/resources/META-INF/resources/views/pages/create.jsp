@@ -15,6 +15,7 @@
 <tiles:importAttribute name="entityPluralName"/>
 
 <tiles:importAttribute name="fields"/>
+<tiles:importAttribute name="additionalCreateNote" ignore="true"/>
 
 <tiles:importAttribute name="dialogMode" ignore="true"/>
 
@@ -68,6 +69,9 @@
         </div>
     </div>
 </form>
+<c:if test="${not additionalCreateNote}">
+    <div class="nNote nInformation"><p>${additionalCreateNote}</p></div>
+</c:if>
 
 <script type="text/javascript">
     $(function () {

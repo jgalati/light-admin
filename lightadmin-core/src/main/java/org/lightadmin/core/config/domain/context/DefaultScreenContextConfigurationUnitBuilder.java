@@ -22,6 +22,7 @@ import org.lightadmin.core.config.domain.unit.DomainTypeConfigurationUnitBuilder
 public class DefaultScreenContextConfigurationUnitBuilder extends DomainTypeConfigurationUnitBuilder<ScreenContextConfigurationUnit> implements ScreenContextConfigurationUnitBuilder {
 
     private String screenName;
+    private String additionalCreateNote;
 
     public DefaultScreenContextConfigurationUnitBuilder(final Class<?> domainType) {
         super(domainType);
@@ -34,9 +35,16 @@ public class DefaultScreenContextConfigurationUnitBuilder extends DomainTypeConf
         this.screenName = screenName;
         return this;
     }
+    
+    @Override
+    public ScreenContextConfigurationUnitBuilder additionalCreateNote(String additionalCreateNote) {
+        this.additionalCreateNote = additionalCreateNote;
+        return this;
+    }
 
     @Override
     public ScreenContextConfigurationUnit build() {
-        return new DefaultScreenContextConfigurationUnit(getDomainType(), screenName);
+        return new DefaultScreenContextConfigurationUnit(getDomainType(), screenName, additionalCreateNote);
     }
+
 }
