@@ -19,7 +19,7 @@ public class DefaultScopesConfigurationUnitBuilderTest {
         assertEquals(DomainConfigurationUnitType.SCOPES, configurationUnit.getDomainConfigurationUnitType());
         assertEquals(DomainType.class, configurationUnit.getDomainType());
 
-        assertScopesDefined(configurationUnit, "All");
+        assertScopesDefined(configurationUnit, "Todos");
     }
 
     @Test
