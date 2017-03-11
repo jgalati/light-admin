@@ -39,6 +39,7 @@ public class StandardLightAdminConfiguration implements LightAdminConfiguration 
     private final boolean fileStreaming;
     private final String basePackage;
     private final boolean demoMode;
+    private final boolean useHttps;
 
     public StandardLightAdminConfiguration(ServletContext servletContext) {
         this.basePackage = servletContext.getInitParameter(LIGHT_ADMINISTRATION_BASE_PACKAGE);
@@ -52,6 +53,8 @@ public class StandardLightAdminConfiguration implements LightAdminConfiguration 
         this.fileStreaming = BooleanUtils.toBoolean(servletContext.getInitParameter(LIGHT_ADMINISTRATION_FILE_STREAMING));
 
         this.demoMode = BooleanUtils.toBoolean(servletContext.getInitParameter(LIGHT_ADMINISTRATION_DEMO_MODE));
+        
+        this.useHttps = BooleanUtils.toBoolean(servletContext.getInitParameter(LIGHT_ADMINISTRATION_USE_HTTPS));
 
         this.securityEnabled = BooleanUtils.toBoolean(servletContext.getInitParameter(LIGHT_ADMINISTRATION_SECURITY));
         if (securityEnabled) {
@@ -105,6 +108,11 @@ public class StandardLightAdminConfiguration implements LightAdminConfiguration 
     public boolean isSecurityEnabled() {
         return securityEnabled;
     }
+    
+    @Override
+    public boolean isUseHttpsEnable() {
+        return useHttps;
+    }
 
     public boolean isDemoMode() {
         return demoMode;
@@ -136,4 +144,5 @@ public class StandardLightAdminConfiguration implements LightAdminConfiguration 
     private String urlWithoutEndSeparator(String url) {
         return url.endsWith("/") ? url.substring(0, url.length() - 1) : url;
     }
+
 }

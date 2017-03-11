@@ -31,6 +31,8 @@ public interface LightAdminConfiguration {
     boolean isSecurityEnabled();
 
     boolean isDemoMode();
+    
+    boolean isUseHttpsEnable();
 
     String getSecurityLogoutUrl();
 
