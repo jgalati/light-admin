@@ -46,7 +46,7 @@
 <script type="text/javascript" src="<light:url value="/scripts/vendor/plugins/other/elfinder.min.js"/>"></script>
 
 <!-- Third party script for BrowserPlus runtime (Google Gears included in Gears runtime now) -->
-<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+<script type="text/javascript" src="<light:url value="/scripts/vendor/plugins/other/browserplus-min.js"/>"></script>
 <!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
 <script type="text/javascript" src="<light:url value="/scripts/vendor/plugins/plupload/js/moxie.js"/>"></script>
 <script type="text/javascript" src="<light:url value="/scripts/vendor/plugins/plupload/js/plupload.dev.js"/>"></script>
@@ -74,14 +74,6 @@
 <script type="text/javascript">
     $(function () {
         $.ajaxSetup({ cache: false });
-
-        $("#support-ukraine").click(function() {
-            document.location.href = "http://wings-phoenix.org.ua/en/donate-instructions";
-        });
-
-        $("a.not-implemented").click(function () {
-            jAlert('Sorry mate, but this feature is not yet implemented.', 'Coming soon...');
-        });
 
         $("div.custom-resource").each(function () {
             var customResourceContainer = $(this);
