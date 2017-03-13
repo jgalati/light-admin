@@ -78,7 +78,7 @@ public class LightAdmin {
     }
     
     public LightAdmin useHttps(boolean useHttps) {
-        servletContext.setInitParameter(LIGHT_ADMINISTRATION_BASE_URL, Boolean.toString(useHttps));
+        servletContext.setInitParameter(LIGHT_ADMINISTRATION_USE_HTTPS, Boolean.toString(useHttps));
         return this;
     }
 }
