@@ -30,17 +30,23 @@ public class LightAdminUrlTag extends org.springframework.web.servlet.tags.UrlTa
     public int doEndTag() throws JspException {
         if (isRelative(getValue())) {
             setValue(absoluteUrlOf(applicationUrl(getValue())));
+        } else {
+            setValue(this.turnHttpToHttpsIfNecessary(getValue()));
         }
         return super.doEndTag();
     }
 
     private String absoluteUrlOf(String applicationBaseUrl) {
         String absUrl = fromCurrentContextPath().path(applicationBaseUrl).build().toUriString();
+        return this.turnHttpToHttpsIfNecessary(absUrl);
+    }
+    
+    private String turnHttpToHttpsIfNecessary(String absUrl) {
         if(lightAdminConfiguration().isUseHttpsEnable()){
             return absUrl.replace("http", "https");
         } else {
             return absUrl;
-        }
+        }        
     }
 
     private boolean isRelative(String value) {
